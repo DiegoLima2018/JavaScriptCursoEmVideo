@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-image: url('imagens/fundo.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            padding: 3em;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>Curso em Video</h2>
+    <h3>Professor Gustavo Guanabara</h3>
+    <a href="https://www.cursoemvideo.com/curso/javascript/">Curso de JavaScript</a>
+
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <footer id="rodape">
+        <p> © 2023 | Diego Rodrigues Lima</p><br>
+        <p><a href="https://www.linkedin.com/in/diego-rodrigues-lima1989/"><img src="imagens/linkedin01.png"></a>
+        </p>
+    </footer>
+    <script>
+        /*var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        window.document.write(p1.innerText)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        */
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+        
+    </script>
+</body>
+
+</html>
