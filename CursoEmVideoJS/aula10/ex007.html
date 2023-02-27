@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
     <style>
-        body{
+        body {
             font: normal 18pt Arial;
         }
+
         input {
             font: normal 18pt Arial;
             width: 100px;
+            margin: 5px;
         }
+
         div#res {
             margin-top: 20px;
         }
@@ -22,10 +25,17 @@
 
 <body>
     <h1>Somando Valores</h1>
+
     <input type="number" name="txtn1" id="txtn1">
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="+" onclick="somar()">
+    <br>
+    <input type="number" name="txtn3" id="txtn3">
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="-" onclick="subtrair()">
+
     <div id="res">Resultado</div>
+    <div id="result">Resultado</div>
     <script>
         function somar() {
             var tn1 = window.document.getElementById('txtn1')
@@ -35,6 +45,15 @@
             var n2 = Number(tn2.value)
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+        function subtrair() {
+            var tn3 = window.document.getElementById('txtn3')
+            var tn4 = window.document.querySelector('input#txtn4')
+            var result = window.document.getElementById('result')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var m = n3 - n4
+            result.innerHTML = `A subtração entre ${n3} e ${n4} é igual a ${m}`
         }
     </script>
 </body>

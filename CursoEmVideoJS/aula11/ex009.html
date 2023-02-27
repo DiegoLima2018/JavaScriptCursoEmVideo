@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pais</title>
+    <style>
+        body {
+            background-image: url('imagens/fundo.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            padding: 3em;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qaul sua nacionalidade</h1>
+    Pais onde você mora: <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+    
+    </div>
+    
+    <script>
+        function verificar() {
+            var tx = window.document.querySelector('input#txt')
+            var res = window.document.querySelector('div#res')
+            var v = (tx.value)
+            res.innerHTML = `<p>Morando no <strong>${v} Você é</strong></p>`
+            if (v == 'Brasil') {
+                res.innerHTML += `Você é Brasileiro!`
+            } else {
+                res.innerHTML += `Você é estrangeiro!`
+            }
+        }
+    </script>
+
+    <footer id="rodape">
+        <p> © 2023 | Diego Rodrigues Lima</p><br>
+        <p><a href="https://www.linkedin.com/in/diego-rodrigues-lima1989/"><img src="imagens/linkedin01.png"></a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
